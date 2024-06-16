@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<header class="bg-white">
+<header class="bg-white border-b border-black">
   <nav class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
@@ -17,9 +17,10 @@
       </a>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Dashboard</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Roles</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Users</a>
+      <a href="{{ url('/dashboard') }}" class="text-sm font-semibold leading-6 text-gray-900">Dashboard</a>
+      <a href="{{ url('/roles') }}" class="text-sm font-semibold leading-6 text-gray-900">Roles</a>
+      <a href="{{ url('/users') }}" class="text-sm font-semibold leading-6 text-gray-900">Users</a>
+      <a href="{{ url('/kategori') }}" class="text-sm font-semibold leading-6 text-gray-900">kategori</a>
     </div>
     <div class="flex flex-1 items-center justify-end gap-x-6">
       <a href="{{ url('/logout') }}" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Logout</a>
@@ -66,7 +67,13 @@
     </div>
   </div>
 </header>
+<div class="row">
+  <div class="container">
+    @yield('contents')
+  </div>
+</div>
 
+@stack('js')
 
 </body>
 </html>

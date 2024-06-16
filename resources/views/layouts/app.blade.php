@@ -29,6 +29,12 @@
       </button>
     </div>
   </nav>
+  <div class="row">
+  <div class="container">
+    @yield('content')
+  </div>
+  </div>
+ 
     
 </body>
 </html>

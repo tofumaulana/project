@@ -70,10 +70,9 @@
 <div class="row">
   <div class="container">
     @yield('contents')
+@stack('js')
   </div>
 </div>
-
-@stack('js')
 
 </body>
 </html>
